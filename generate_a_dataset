@@ -1,0 +1,10 @@
+# Generate a dataset and plot it
+import numpy as np
+import sklearn
+from sklearn import datasets
+import matplotlib
+import matplotlib.pyplot as plt
+
+np.random.seed(0)
+X, y = sklearn.datasets.make_moons(1000, noise=0.20)
+plt.scatter(X[:,0], X[:,1], s=40, c=y, cmap=plt.cm.Spectral)
